@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Raghavendra Bites — Menu</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+  body {
+    background: url('https://images.unsplash.com/photo-1601050690597-1c2d88f2f8b3?q=80&w=1920&auto=format&fit=crop') no-repeat center center/cover;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    color: #333;
+  }
+
+  /* Header */
+  header.nav-wrap {
+    background: rgba(255, 152, 0, 0.95);
+    color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  .container.nav {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .brand {
+    font-size: 1.8em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+  }
+  nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  /* Filter Buttons */
+  .filter-buttons {
+    text-align: center;
+    margin: 30px 0 40px;
+  }
+
+  .filter-buttons button {
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid #ff9800;
+    color: #ff9800;
+    padding: 12px 28px;
+    margin: 8px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  }
+
+  .filter-buttons button:hover {
+    background: #ff9800;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  }
+
+  .filter-buttons button.active {
+    background: #ff9800;
+    color: #fff;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  }
+
+  /* Grid */
+  #menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding-bottom: 60px;
+  }
+
+  .card {
+    background: rgba(255,255,255,0.95);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  }
+
+  .card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+
+  .card h3 {
+    margin: 10px 0 5px;
+  }
+
+  .muted {
+    color: #777;
+    font-size: 0.9em;
+  }
+
+  .btn {
+    background: #4caf50;
+    border: none;
+    color: white;
+    padding: 8px 14px;
+    margin: 10px 0 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .btn:hover {
+    background: #388e3c;
+  }
+
+  footer {
+    text-align: center;
+    padding: 15px;
+    background: rgba(255,152,0,0.9);
+    color: #fff;
+    margin-top: 40px;
+  }
+</style>
+</head>
+<body>
+
+<header class="nav-wrap">
+  <div class="container nav">
+    <a class="brand" href="index.html">Raghavendra Bites</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html" style="text-decoration: underline; font-weight: 600;">Menu</a>
+      <a href="cart.html">Cart <span id="cart-count">(0)</span></a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="filter-buttons">
+    <button class="active" onclick="filterMenu('all')">All</button>
+    <button onclick="filterMenu('veg')">Veg</button>
+    <button onclick="filterMenu('dessert')">Dessert</button>
+  </div>
+
+  <section id="menu-grid">
+    <!-- JS will load menu items here -->
+  </section>
+</main>
+
+<footer>
+  <div>Designed by <b>Venkata Dhanush Kumar Grandhe</b></div>
+</footer>
+
+<script>
+  function setActive(btn) {
+    document.querySelectorAll('.filter-buttons button').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>

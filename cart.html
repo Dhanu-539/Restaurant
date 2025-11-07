@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Raghavendra Bites — Cart</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+  body {
+    background: url('https://images.unsplash.com/photo-1601050690597-1c2d88f2f8b3?q=80&w=1920&auto=format&fit=crop') no-repeat center center/cover;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    color: #333;
+  }
+
+  /* Header */
+  header.nav-wrap {
+    background: rgba(255, 152, 0, 0.95);
+    color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  .container.nav {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .brand {
+    font-size: 1.8em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+  }
+  nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  /* Cart Layout */
+  main.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+    background: rgba(255,255,255,0.95);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  }
+
+  h1 {
+    text-align: center;
+    color: #ff9800;
+  }
+
+  #cart-items {
+    margin-top: 20px;
+  }
+
+  .card {
+    background: #fff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+  }
+
+  .muted {
+    color: #777;
+  }
+
+  .chip {
+    background: #f1f1f1;
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: none;
+    font-weight: 600;
+  }
+
+  .btn {
+    background: #4caf50;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .btn:hover {
+    background: #388e3c;
+  }
+
+  .cart-summary {
+    text-align: right;
+    margin-top: 25px;
+    font-size: 1.2em;
+  }
+
+  .cart-summary .btn {
+    background: #ff9800;
+    margin-top: 10px;
+  }
+
+  .cart-summary .btn:hover {
+    background: #e68900;
+  }
+
+  footer {
+    text-align: center;
+    padding: 15px;
+    background: rgba(255,152,0,0.9);
+    color: #fff;
+    margin-top: 40px;
+  }
+
+  a {
+    color: #ff9800;
+    text-decoration: none;
+  }
+</style>
+</head>
+<body>
+
+<header class="nav-wrap">
+  <div class="container nav">
+    <a class="brand" href="index.html">Raghavendra Bites</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="cart.html" style="text-decoration: underline; font-weight: 600;">Cart <span id="cart-count">(0)</span></a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <h1>Your Cart</h1>
+  <div id="cart-items"></div>
+  <div class="cart-summary">
+    <div>Total: <span id="cart-total">₹0</span></div>
+    <button class="btn" onclick="checkout()">Checkout</button>
+  </div>
+</main>
+
+<footer>
+  <div>Designed by Venkata Dhanush Kumar Grandhe</div>
+</footer>
+<!-- ✅ Add these at the end of cart.html, just before </body> -->
+<script src="./script.js"></script>
+<script src="./cart.js"></script>
+
+</body>
+</html>

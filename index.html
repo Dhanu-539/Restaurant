@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Raghavendra Tiffen Center</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+  /* Full-page vegetarian background */
+  body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('https://t4.ftcdn.net/jpg/02/75/39/23/360_F_275392381_9upAWW5Rdsa4UE0CV6gRu2CwUETjzbKy.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+  }
+
+  /* Overlay for readability */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5); /* dark overlay */
+    z-index: -1;
+  }
+
+  header, footer {
+    background: rgba(0, 0, 0, 0.6); /* semi-transparent */
+    padding: 15px 0;
+  }
+
+  header a, footer {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  nav a {
+    margin-right: 20px;
+    font-weight: bold;
+  }
+
+  /* Hero section */
+  .hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 20px;
+    background: rgba(0, 0, 0, 0.4); /* semi-transparent overlay */
+    border-radius: 15px;
+    margin-top: 20px;
+  }
+
+  .hero-left {
+    flex: 1 1 500px;
+    padding: 20px;
+  }
+
+  .hero-left h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+  }
+
+  .hero-left p {
+    font-size: 1.2em;
+    margin-bottom: 25px;
+    line-height: 1.5;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-right: 15px;
+    background: #ff9800;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+
+  .btn:hover {
+    background: #e68900;
+  }
+
+  .btn.outline {
+    background: transparent;
+    border: 2px solid #ff9800;
+  }
+
+  .btn.outline:hover {
+    background: #ff9800;
+    color: #fff;
+  }
+
+  /* Popular & About sections */
+  .popular, .about {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    margin: 30px 0;
+    border-radius: 15px;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  /* Hero right image */
+  .hero-right {
+    flex: 1 1 400px;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .hero-right img {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+  }
+
+  /* Footer styling */
+  footer {
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: 40px;
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .hero-left, .hero-right {
+      padding: 10px;
+    }
+  }
+  .popular {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    margin: 30px 0;
+    border-radius: 15px;
+  }
+
+  .popular h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .dish-card {
+    background: rgba(255,255,255,0.1);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1 1 200px;
+    max-width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .dish-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  }
+
+  .dish-card h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2em;
+    color: #fff;
+  }
+
+  .dish-card p {
+    font-weight: bold;
+    font-size: 1em;
+    color: #ff9800;
+  }
+
+  .dish-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  }
+
+  @media (max-width: 768px) {
+    .grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header class="nav-wrap">
+  <div class="container nav">
+    <a class="brand" href="index.html">Raghavendra Bites</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="cart.html">Cart <span id="cart-count">(0)</span></a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <div class="hero-left">
+      <h1>Fresh Vegetarian Food</h1>
+      <p>Healthy, tasty, and fresh vegetarian meals and Cattering Service also.</p>
+      <div class="hero-actions">
+        <a class="btn" href="menu.html">Order Now</a>
+        <a class="btn outline" href="contact.html">Reserve a Table</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdu2KkpKcl8M8HAz68Jr6zvEFR2SA85HPcjg&s" alt="Vegetarian Dish">
+    </div>
+  </section>
+
+  <!-- Popular Dishes Section -->
+<section class="popular">
+  <h2>Popular Dishes</h2>
+  <div class="grid" id="popular-grid">
+    <!-- Idly -->
+    <div class="dish-card">
+      <img src="https://t3.ftcdn.net/jpg/03/62/02/26/360_F_362022640_fZ6UM0JycJlFDdBiR1pYlNddKfdGvYwR.jpg" alt="Idly">
+      <h3>Idly</h3>
+      <p>₹30</p>
+    </div>
+
+    <!-- Dosa -->
+    <div class="dish-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx-glTW9VpM8O7nW1los6X5F9VkIOaj07rgw&s" alt="Dosa">
+      <h3>Dosa</h3>
+      <p>₹50</p>
+    </div>
+
+    <!-- Poori -->
+    <div class="dish-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDD_nEtGApV8uhw-I7kugZrMWz5VFO1U1ebQ&s" alt="Poori">
+      <h3>Poori</h3>
+      <p>₹40</p>
+    </div>
+  </div>
+</section>
+
+  <section class="about">
+    <h2>About Raghavendra Bites</h2>
+    <p>Raghavendra Bites is your go-to destination for freshly prepared vegetarian tiffins and snacks. We craft every dish with care, using quality ingredients and authentic local flavors. From soft, fluffy idlies to crispy dosas and flavorful pooris, our meals are designed to bring comfort, taste, and joy to your day. Whether you’re starting your morning or enjoying a quick snack, Delight Bites promises wholesome, delicious food that leaves you satisfied and coming back for more.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="container center">Designed by Venkata Dhanush Kumar Grandhe</div>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/cart.js"></script>
+</body>
+</html>
