@@ -1,15 +1,15 @@
 // 🥗 MENU ITEMS
 const DISHES = [
-  { id: 1, name: 'Idly', cat: 'veg', price: 40, img: 'https://t3.ftcdn.net/jpg/03/62/02/26/360_F_362022640_fZ6UM0JycJlFDdBiR1pYlNddKfdGvYwR.jpg' },
-  { id: 2, name: 'Dosa', cat: 'veg', price: 60, img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx-glTW9VpM8O7nW1los6X5F9VkIOaj07rgw&s' },
-  { id: 3, name: 'Poori', cat: 'veg', price: 70, img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDD_nEtGApV8uhw-I7kugZrMWz5VFO1U1ebQ&s' },
-  { id: 4, name: 'Upma', cat: 'veg', price: 50, img: 'https://thumbs.dreamstime.com/b/upma-uppumavu-uppittu-dish-indian-subcontinent-most-common-south-maharashtrian-sri-lankan-tamil-breakfast-119700026.jpg' },
-  { id: 5, name: 'Pongal', cat: 'veg', price: 55, img: 'https://www.sharmispassions.com/wp-content/uploads/2012/02/VenPongal6.jpg' },
-  { id: 6, name: 'Vada', cat: 'veg', price: 45, img: 'https://www.awesomecuisine.com/wp-content/uploads/2014/12/medhu-vadai.jpg' },
-  { id: 7, name: 'Ghee Dosa', cat: 'veg', price: 80, img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtV8DrRy8Bz1_BWquHH_pXyPU3OIRK-3LWMQ&s' },
-  { id: 8, name: 'Onion Dosa', cat: 'veg', price: 85, img: 'https://i0.wp.com/www.chitrasfoodbook.com/wp-content/uploads/2018/02/onion-uthappam.jpg?ssl=1' },
-  { id: 9, name: 'Karam Dosa', cat: 'veg', price: 90, img: 'https://farm6.static.flickr.com/5095/5566873325_afbb95e4fd_z.jpg' },
-  { id: 10, name: 'Juices', cat: 'dessert', price: 60, img: 'https://media.istockphoto.com/id/821583034/photo/various-fruits-juices.jpg?s=612x612&w=0&k=20&c=oHI_Qv-Ci2vRjiJFYcFY40F-nPGJCRvw6fTHhM-TyUg=' },
+  { id: 1, name: 'Idly', cat: 'veg', price: 60, img: 'https://t3.ftcdn.net/jpg/03/62/02/26/360_F_362022640_fZ6UM0JycJlFDdBiR1pYlNddKfdGvYwR.jpg' },
+  { id: 2, name: 'Dosa', cat: 'veg', price: 25, img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx-glTW9VpM8O7nW1los6X5F9VkIOaj07rgw&s' },
+  { id: 3, name: 'Poori', cat: 'veg', price: 45, img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDD_nEtGApV8uhw-I7kugZrMWz5VFO1U1ebQ&s' },
+  { id: 4, name: 'Upma', cat: 'veg', price: 35, img: 'https://thumbs.dreamstime.com/b/upma-uppumavu-uppittu-dish-indian-subcontinent-most-common-south-maharashtrian-sri-lankan-tamil-breakfast-119700026.jpg' },
+  { id: 5, name: 'Pongal', cat: 'veg', price: 35, img: 'https://www.sharmispassions.com/wp-content/uploads/2012/02/VenPongal6.jpg' },
+  { id: 6, name: 'Vada', cat: 'veg', price: 20, img: 'https://www.awesomecuisine.com/wp-content/uploads/2014/12/medhu-vadai.jpg' },
+  { id: 7, name: 'Ghee Dosa', cat: 'veg', price: 40, img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtV8DrRy8Bz1_BWquHH_pXyPU3OIRK-3LWMQ&s' },
+  { id: 8, name: 'Onion Dosa', cat: 'veg', price: 40, img: 'https://i0.wp.com/www.chitrasfoodbook.com/wp-content/uploads/2018/02/onion-uthappam.jpg?ssl=1' },
+  { id: 9, name: 'Karam Dosa', cat: 'veg', price: 25, img: 'https://farm6.static.flickr.com/5095/5566873325_afbb95e4fd_z.jpg' },
+  { id: 10, name: 'Juices', cat: 'dessert', price: 10, img: 'https://media.istockphoto.com/id/821583034/photo/various-fruits-juices.jpg?s=612x612&w=0&k=20&c=oHI_Qv-Ci2vRjiJFYcFY40F-nPGJCRvw6fTHhM-TyUg=' },
   { id: 11, name: 'Water Bottle', cat: 'dessert', price: 20, img: 'https://t3.ftcdn.net/jpg/07/86/76/06/360_F_786760607_IwcScz3k7Efj42i1S7mnewhWQXrhAa0o.jpg' }
 ];
 
